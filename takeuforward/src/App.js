@@ -48,7 +48,7 @@ const App = () => {
 
   // To populate the UI with the data in database
   useEffect(() => {
-    fetch('http://localhost:5000/api/banner')
+    fetch('https://takeuforward-backend-ozof.onrender.com/api/banner')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -83,7 +83,7 @@ const App = () => {
 
   // to update the data 
   const updateBanner = (description, time, link, imageUrl) => {
-    fetch('http://localhost:5000/api/banner', {
+    fetch('https://takeuforward-backend-ozof.onrender.com/api/banner', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
